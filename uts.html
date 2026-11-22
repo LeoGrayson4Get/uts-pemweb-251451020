@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kegiatan Kampus - UTS Pemrograman Web</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="images/kampus.png">
+</head>
+<body>
+    
+    <!-- LANGKAH 2: Header & Navigasi -->
+     <header>
+        <h1>Judul Kegiatan Kampus</h1>
+        <nav>
+            <a href="#tentang">Tentang</a>
+            <a href="#rundown">Rundown</a>
+            <a href="#daftar">Daftar</a>
+        </nav>
+     </header>
+
+     <main>
+        <!-- LANGKAH 2 & 3: Section Tentang (Gambar & Link Eksternal) -->
+         <section id="tentang">
+            <div class="media-container">
+                <!-- Pastikan ada file gambar di folder images/kampus.png -->
+                 <a href="https://widyagama.ac.id/"><img src="images/kampus.png" alt="Logo"></a>
+            </div>
+            <div class="teks-container">
+                <h2>Tentang Kegiatan</h2>
+                <p>Kegiatan ini dirancang untuk <strong>meningkatkan skill</strong> mahasiswa di bidang teknologi. Kami mengundang <em>pembicara ahli</em> dari industri.</p>
+                <a href="https://developer.mozilla.org" target="_blank" rel="noreferrer" class="link-eksternal">Tautan Panduan Kegiatan &#8599;</a>
+            </div>
+         </section>
+
+         <!-- LANGKAH 2: Section Rundown (List) -->
+          <section id="rundown">
+            <div class="list-container">
+                <h2>Syarat Peserta</h2>
+                <ul>
+                    <li>Mahasiswa aktif semester 1-8</li>
+                    <li>Membawa laptop pribadi</li>
+                </ul>
+            </div>
+            <div class="list-container">
+                <h2>Alur Pendaftaran</h2>
+                <ol>
+                    <li>Isi data formulir</li>
+                    <li>Verifikasi Email</li>
+                    <li>Kirim pendaftaran</li>
+                </ol>
+            </div>
+          </section>
+
+          <!-- LANGKAH 4: Section Daftar (Form & Flexbox) -->
+           <section id="daftar">
+            <h2>Formulir Pendaftaran</h2>
+            <form action="#" method="post">
+                <div class="form-group">
+                    <label for="nama">Nama Lengkap</label>
+                    <input type="text" id="nama" name="nama" required placeholder="Masukkan nama">
+                </div>
+
+                <div class="form-group">
+                    <label for="surel">Alamat Surel</label>
+                    <input type="email" id="surel" name="surel" required placeholder="email.@contoh.com">
+                </div>
+
+                <div class="form-group">
+                    <label for="tgl_lahir">Tanggal Lahir</label>
+                    <input type="date" id="tgl_lahir" name="tgl_lahir">
+                </div>
+
+                <div class="form-group">
+                    <label for="divisi">Pilihan Divisi</label>
+                    <select name="divisi" id="divisi">
+                        <option value="acara">Acara</option>
+                        <option value="humas">Hubungan Masyarakat</option>
+                        <option value="it">Teknologi Informasi</option>
+                    </select>
+                </div>
+
+                <div class="form-group checkbox-group">
+                    <input type="checkbox" id="setuju" name="setuju" required>
+                    <label for="setuju">Saya menyetujui seluruh syarat dan ketentuan kegiatan.</label>
+                </div>
+
+                <button type="submit">Kirim Pendaftaran</button>
+            </form>
+           </section>
+     </main>
+
+     <!-- LANGKAH 2: Footer -->
+      <footer>
+        <p>&copy; 2026 Pemrograman Web - Informasi Panitia Kegiatan</p>
+      </footer>
+</body>
+</html>

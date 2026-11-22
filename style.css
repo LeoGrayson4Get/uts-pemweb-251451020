@@ -1,0 +1,231 @@
+/* Reset Dasar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: #f4f7f6;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Menengahkan konten utama */
+    padding: 20px;
+}
+
+/* Container utama agar rapi dan tidak terlalu lebar */
+header, main, footer {
+    width: 100%;
+    max-width: 800px;
+    background-color: #fff;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* ================= HEADER & NAV ================= */
+header {
+    background-color: #0d4e5b;
+    color: white;
+    padding: 20px;
+    border-bottom: 4px solid #083a44;
+}
+
+header h1 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+nav {
+    display: flex; /* INSTRUKSI FLEXBOX */
+    gap: 15px; /* INSTRUKSI FLEXBOX */
+}
+
+nav a {
+    color: #a4e0eb;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 4px;
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: 0.3s;
+}
+
+nav a:hover {
+    background-color: #a4e0eb;
+    color: #0d4e5b;
+}
+
+/* ================= MAIN SECTIONS ================= */
+main {
+    background-color: transparent; /* Biarkan section yang punya background */
+    box-shadow: none;
+}
+
+section {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+h2 {
+    color: #0d4e5b;
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+}
+
+/* Section Tentang (Flexbox) */
+#tentang {
+    display: flex; /* INSTRUKSI FLEXBOX */
+    gap: 20px; /* INSTRUKSI FLEXBOX */
+    align-items: center; /* INSTRUKSI FLEXBOX */
+    flex-wrap: wrap; /* Agar responsif di layar kecil */
+}
+
+.media-container {
+    width: 200px;
+    height: auto;
+    border-radius: 8px;
+    background-color: #eee; /* Warna placeholder jika gambar belum ada */
+}
+
+.teks-container {
+    flex: 1; /* Mengisi sisa ruang */
+}
+
+.teks-container p {
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+.link-eksternal {
+    color: #0066cc;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.link-eksternal:hover {
+    text-decoration: underline;
+}
+
+/* Section Rundown (Flexbox) */
+#rundown {
+    display: flex; /* INSTRUKSI FLEXBOX */
+    gap: 20px; /* INSTRUKSI FLEXBOX */
+    flex-wrap: wrap;
+}
+
+.list-container {
+    flex: 1;
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #e0e0e0;
+    min-width: 250px;
+}
+
+.list-container ul, .list-container ol {
+    padding-left: 20px;
+    line-height: 1.6;
+}
+
+/* ================= FORM & FLEXBOX ================= */
+form {
+    display: flex; /* INSTRUKSI FLEXBOX */
+    flex-direction: column; /* Menyusun ke bawah */
+    gap: 15px; /* INSTRUKSI FLEXBOX */
+}
+
+.form-group {
+    display: flex; /* Membuat label dan input sejajar */
+    flex-direction: column;
+    gap: 5px;
+}
+
+label {
+    font-weight: bold;
+    font-size: 0.9rem;
+    color: #444;
+}
+
+input[type="text"], input[type="email"], input[type="date"], select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+    font-size: 1rem;
+}
+
+/* Checkbox Flexbox */
+.checkbox-group {
+    display: flex;
+    flex-direction: row; /* Sejajar ke samping */
+    align-items: center; /* Teks sejajar tengah dengan kotak */
+    gap: 10px;
+}
+
+.checkbox-group label {
+    font-weight: normal;
+}
+
+button {
+    padding: 12px;
+    background-color: #0d4e5b;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    align-self: flex-start; /* Tombol tidak memanjang penuh */
+}
+
+button:hover {
+    background-color: #083a44;
+}
+
+/* --- STYLING KHUSUS UNTUK LOGO --- */
+
+/* Wadah untuk logo */
+.media-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Mengatur gambar logo agar tetap proporsional */
+.media-container img {
+  width: 180px;          /* Ukuran lebar logo (bisa disesuaikan) */
+  height: auto;          /* Biarkan tinggi menyesuaikan agar tidak gepeng */
+  border-radius: 50%;    /* Membuat gambar menjadi bulat sempurna */
+  object-fit: cover;     /* Memastikan logo tidak terpotong aneh */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Memberikan efek bayangan estetis */
+  border: 2px solid #f4f7f6; /* Memberikan bingkai tipis agar rapi */
+  background-color: white;   /* Antisipasi jika background logo transparan */
+}
+
+/* ================= FOOTER ================= */
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #e0e0e0;
+    color: #555;
+    font-size: 0.9rem;
+    border-radius: 8px;
+}
+
+/* Responsif untuk layar HP */
+@media (max-width: 600px) {
+    #tentang {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .media-container img {
+        width: 100%;
+    }
+}
